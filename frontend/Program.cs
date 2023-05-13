@@ -7,7 +7,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddHttpClient<WeatherClient>(client =>
 {
-         client.BaseAddress = builder.Configuration.GetServiceUri("backend");
+    client.BaseAddress = builder.Configuration.GetServiceUri("backend");
 });
 
 var app = builder.Build();
