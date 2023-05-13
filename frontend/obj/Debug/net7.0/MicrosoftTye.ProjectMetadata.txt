@@ -1,0 +1,21 @@
+AssemblyInformationalVersion:
+InformationalVersion: 1.0.0
+Version: 1.0.0
+TargetFrameworks:
+RunCommand: C:\Users\gbrow\source\repos\microservice\frontend\bin\Debug\net7.0\frontend.exe
+RunArguments:
+TargetPath: C:\Users\gbrow\source\repos\microservice\frontend\bin\Debug\net7.0\frontend.dll
+PublishDir: bin\Debug\net7.0\publish\
+AssemblyName: frontend
+IntermediateOutputPath: obj\Debug\net7.0\
+TargetFramework: net7.0
+_ShortFrameworkIdentifier:
+_ShortFrameworkVersion:
+_TargetFrameworkVersionWithoutV: 7.0
+FrameworkReference: Microsoft.NETCore.App;Microsoft.AspNetCore.App
+ContainerBaseImage:
+ContainerBaseTag:
+MicrosoftNETPlatformLibrary:
+_AspNetCoreAppSharedFxIsEnabled:
+UsingMicrosoftNETSdkWeb: true
+AzureFunctionsVersion:
