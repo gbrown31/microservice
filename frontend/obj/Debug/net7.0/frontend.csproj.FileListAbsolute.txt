@@ -29,3 +29,5 @@ C:\Users\gbrow\source\repos\microservice\frontend\obj\Debug\net7.0\refint\fronte
 C:\Users\gbrow\source\repos\microservice\frontend\obj\Debug\net7.0\frontend.pdb
 C:\Users\gbrow\source\repos\microservice\frontend\obj\Debug\net7.0\frontend.genruntimeconfig.cache
 C:\Users\gbrow\source\repos\microservice\frontend\obj\Debug\net7.0\ref\frontend.dll
+C:\Users\gbrow\source\repos\microservice\frontend\bin\Debug\net7.0\Microsoft.Tye.Extensions.Configuration.dll
+C:\Users\gbrow\source\repos\microservice\frontend\obj\Debug\net7.0\frontend.csproj.CopyComplete

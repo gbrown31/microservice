@@ -1,7 +1,14 @@
+using frontend;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddHttpClient<WeatherClient>(client =>
+{
+         client.BaseAddress = builder.Configuration.GetServiceUri("backend");
+});
 
 var app = builder.Build();
 
