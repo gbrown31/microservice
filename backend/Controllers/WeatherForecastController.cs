@@ -1,3 +1,5 @@
+using Azure.Storage;
+using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
@@ -23,6 +25,24 @@ public class WeatherForecastController : ControllerBase
     [HttpGet]
     public async Task<string> Get([FromServices] IDistributedCache cache)
     {
+        _logger.LogInformation("hello from backend.");
+        try
+        {
+            //var client = new BlobContainerClient(new Uri(https://127.0.0.1:10000/devstoreaccount1/container-name));
+
+            var client = new BlobContainerClient(
+                new Uri("http://127.0.0.1:10000/devstoreaccount1/container-name"),
+                new StorageSharedKeyCredential("devstoreaccount1", "Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw=="));
+
+            var resposne = await client.ExistsAsync();
+
+            _logger.LogInformation($"blob container exists: {Response.StatusCode}");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "error with blob container client");
+        }
+
         var weather = await cache.GetStringAsync("weather");
 
         if (weather == null)
