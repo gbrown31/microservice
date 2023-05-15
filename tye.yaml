@@ -13,3 +13,8 @@ services:
 - name: redis-cli
   image: redis
   args: "redis-cli -h redis MONITOR"
+- name: azurite
+  image: mcr.microsoft.com/azure-storage/azurite
+  args: azurite-blob --blobHost 0.0.0.0 --blobPort 10000
+  bindings:
+  - port: 10000
